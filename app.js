@@ -13,7 +13,6 @@ db.once('open', () => console.log('Connected to database'))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
-
 app.post("/addtask", function(req, res) {
     let newTask = new Todo({
         name: req.body.newtask
